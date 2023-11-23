@@ -7,7 +7,7 @@ A   small   web   application   with   HTML,   CSS,   and   JavaScript   that   
 - On   user   action   (e.g.,   by   clicking   on   a   list   item),   view   details   for   that   item
 <br>
 
-## Dependencies
+## Project Dependencies
 - JavaScript version
 - ESLint rules
 
