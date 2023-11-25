@@ -24,13 +24,18 @@ let pokemonRepository = (function () {
         getAll: function () {
             return pokemonList;
         },
+        // add conditional to add in only the correct type
         add: function (pokemon) {
-            pokemonList.push(pokemon);
+            if (typeof pokemon === 'object' && "name" in pokemon && "height" in pokemon) {
+                pokemonList.push(pokemon);
+            } else {
+                console.log("Pokemon is not correct");
+            }
         }
     };
 })();
 
-pokemonRepository.getAll().forEach(function(poke){
+pokemonRepository.getAll().forEach(function (poke) {
     if (poke.height >= 4) {
         document.write(`<p>${poke.name} - (height: ${poke.height} - Wow, that's big!)</p>`);
     } else {
