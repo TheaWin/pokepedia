@@ -20,18 +20,11 @@ let pokemonList = [
     }
 ];
 
-/* line 29: for loop to iterates over the objects in the arra
- line 30 & 31: declaring object name to look for specific values
-line 31 to 34: using template literal to show result 
-line 32 to 34: as well as adding conition within the loop
- */
-for (let i = 0; i < pokemonList.length; i++) {
-    let pokeName = pokemonList[i].name;
-    let pokeHeight = pokemonList[i].height;
-    let pokeInfo = `<p>${pokeName} 
-        ${pokeHeight >= 4 
-            ? `(height: ${pokeHeight} - Wow, that's big!` 
-            : `(height: ${pokeHeight}`})</p>`
-    document.write(pokeInfo);
-    
-  }
+pokemonList.forEach (function(poke) {
+    if (poke.height >=4) {
+        document.write (`<p>${poke.name} - (height: ${poke.height} - Wow, that's big!)</p>`);
+    } else {
+        document.write (`<p>${poke.name} - (height: ${poke.height})</p>`);
+    }
+    }
+)
