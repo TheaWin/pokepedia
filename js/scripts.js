@@ -32,6 +32,11 @@ let pokemonRepository = (function() {
           console.log("Pokemon is not correct");
         }
       },
+      //added showDetails function
+      showDetails: function(pokemon) {
+        console.log(`id: ${pokemon.id}, name: ${pokemon.name}, height: ${pokemon.height}, types: ${pokemon.types}`);
+      },
+      
       //addListItem for DOM Manipulation
       addListItem: function(pokemon) {
         let pokeList = document.querySelector('.pokemon-list');
@@ -40,21 +45,16 @@ let pokemonRepository = (function() {
         let button = document.createElement('button');
         button.innerText = pokemon.name;
         button.classList.add('button');
+        //add an eventListener to the button that will use showDetails function
+      button.addEventListener('click', function() {
+        pokemonRepository.showDetails(pokemon);
+      });
         listItem.appendChild(button);
         pokeList.appendChild(listItem);
-      },
-      //added showDetails function
-      showDetails: function(pokemon) {
-        console.log(`id: ${pokemon.id}, 
-  name: ${pokemon.name},
-  height: ${pokemon.height},
-  types: ${pokemon.types}`);
       }
     };
   })();
   
   pokemonRepository.getAll().forEach(function (pokemon) {
     pokemonRepository.addListItem(pokemon);
-    //to test if showDetails work
-    pokemonRepository.showDetails(pokemon);
   });
