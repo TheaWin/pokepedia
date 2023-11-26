@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container {
+    outline-style: solid;
+    outline-width: 1px;
+    width: 300px;
+    margin-top: 10px;
+  }
+  
+  h1 {
+    font-size: 25px;
+    margin: 10px;
+  }
+  
+  .pokemon-list {
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
+  }
+  
+  .button {
+    background-color: lightgray;
+    font-size: 16px;
+    padding: 20px 10px;
+    margin: 5px auto;
+    width: 100%;
+    text-align: left;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: red;
+    color: white;
+  }
