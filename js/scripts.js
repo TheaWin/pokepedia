@@ -103,3 +103,32 @@ pokemonRepository.loadList().then(function() {
     pokemonRepository.addListItem(pokemon);
   });
 });
+
+let form = $('.form-inline');
+let input = $('<input>')
+  .addClass('form-control mr-2 my-1')
+  .attr({
+    'type': 'text',
+    'placeholder': 'Search',
+    'aria-label': 'Search',
+  });
+form.append(input);
+
+function searchFunction() {
+  var filter, li, searchValue, buttonPokemon;
+  filter = input.val().toUpperCase();
+  li = $('.list-group-item');
+
+  li.each(function() {
+    buttonPokemon = $(this).find('.button-class');
+    searchValue = buttonPokemon.text();
+    if (searchValue.toUpperCase().indexOf(filter) > -1) {
+      $(this).show();
+    } else {
+      $(this).hide();
+    }
+  });
+}
+
+input.on('keyup', searchFunction);
+
