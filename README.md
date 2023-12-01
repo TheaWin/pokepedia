@@ -9,6 +9,8 @@ A   small   web   application   with   HTML,   CSS,   and   JavaScript   that   
 ## Project Dependencies
 - JavaScript version
 - ESLint rules
+- jQuery
+- Bootstrap
 
 ## API used
 An external API used for this project is [Pokémon API](https://pokeapi.co/).
