@@ -43,8 +43,8 @@ h1 {
 
 .button-style {
   background-color: #fff;
-  border-color: #FBCA3C;
-  color: #0A285F;
+  border-color: #fbca3c;
+  color: #0a285f;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -52,8 +52,8 @@ h1 {
 .button-style:hover,
 .button-style:focus {
   cursor: pointer;
-  background-color: #FBCA3C;
-  border-color: #0A285F;
+  background-color: #fbca3c;
+  border-color: #0a285f;
 }
 
 .button-style:active,
@@ -64,7 +64,7 @@ h1 {
 }
 
 .modal {
-  color: #0A285F;
+  color: #0a285f;
 }
 
 .modal-dialog {
