@@ -5,7 +5,7 @@ let pokemonRepository = (function() {
   return {
 
     showModal: function(pokemon) {
-      let modalBody = $(".modal-body");
+      let modalBody = $('.modal-body');
       let modalTitle = $('.modal-title');
       //clear all existing content
       modalBody.html('');
