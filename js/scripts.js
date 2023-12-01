@@ -1,5 +1,3 @@
-const unusedVariable = "Hello, World!";
-
 let pokemonRepository = (function() {
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
@@ -18,7 +16,7 @@ let pokemonRepository = (function() {
         .addClass('modal-img float-right')
         .attr('src', pokemon.imageUrl);
       let contentElement = $('<p>')
-        .addClass('text-left')
+        .addClass('text-left content')
         .html(`id: #${pokemon.id}<br>height: ${pokemon.height}<br>types: ${pokemon.types}`);
 
       modalTitle.append(titleElement);
