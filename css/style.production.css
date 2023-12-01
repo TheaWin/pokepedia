@@ -1,0 +1,110 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 2 version
+*/
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #313131;
+  color: #f5f5f5;
+  font-family: 'Press Start 2P', sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: #313131;
+}
+
+.search-button {
+  color: #f5f5f5;
+}
+
+.container {
+  margin-top: 5rem;
+  background-color: #616161;
+  max-width: 750px;
+}
+
+h1 {
+  padding: 10px;
+  font-size: 1.25em;
+  text-align: left;
+  margin: 5px;
+}
+
+.list-group-item {
+  background-color: #f5f5f5;
+  margin-bottom: 0;
+  border: none;
+}
+
+.content {
+  padding-left: 10px;
+  margin-left: 5px;
+}
+
+.button-style {
+  background-color: #f5f5f5;
+  border-color: #fbca3c;
+  color: #0a285f;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.button-style:hover {
+  cursor: pointer;
+  background-color: #fbca3c;
+  border-color: #0a285f;
+}
+
+.button-style:focus {
+  cursor: pointer;
+  background-color: #fbca3c;
+  border-color: #0a285f;
+}
+
+.button-style:active {
+  background-color: #ee1515;
+  border: 5px solid #313131;
+  color: #f5f5f5;
+}
+
+.button-style:active {
+  background-color: #ee1515;
+  border: 5px solid #313131;
+  color: #f5f5f5;
+}
+
+.modal {
+  color: #0a285f;
+}
+
+.modal-dialog {
+  margin-top: 15%;
+}
+
+.modal-img {
+  margin-top: -20px;
+  width: 40%;
+}
+
+#btn-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  border-radius: 50%;
+}
+
+@media all and (max-width: 768px) {
+  .button-style {
+    padding: 20px auto;
+  }
+}

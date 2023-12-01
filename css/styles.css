@@ -1,50 +1,62 @@
+:root {
+  --dark-color: #313131;
+  --light-color: #f5f5f5;
+  --blue-color: #0a285f;
+  --yellow-color: #fbca3c;
+  --gray-color: #616161;
+  --red-color: #ee1515;
+  --padding: 10px;
+  --margin: 5px;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #313131;
-  color: #fff;
+  background-color: var(--dark-color);
+  color: var(--light-color);
   font-family: 'Press Start 2P', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
   line-height: 1.6;
   min-height: 100vh;
-  text-align: center;
-  margin-top: 35px;
 }
 
 .navbar {
-  background-color: #313131;
+  background-color: var(--dark-color);
 }
 
 .search-button {
-  color: #f5f5f5;
+  color: var(--light-color);
 }
 
 .container {
   margin-top: 5rem;
-  background-color: #616161;
+  background-color: var(--gray-color);
   max-width: 750px;
 }
 
 h1 {
-  padding: 10px;
+  padding: var(--padding);
   font-size: 1.25em;
   text-align: left;
-  margin: 5px;
+  margin: var(--margin);
 }
 
 .list-group-item {
-  background-color: #f5f5f5;
+  background-color: var(--light-color);
   margin-bottom: 0;
   border: none;
 }
 
+.content {
+  padding-left: var(--padding);
+  margin-left: var(--margin);
+}
+
 .button-style {
-  background-color: #fff;
-  border-color: #fbca3c;
-  color: #0a285f;
+  background-color: var(--light-color);
+  border-color: var(--yellow-color);
+  color: var(--blue-color);
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -52,19 +64,19 @@ h1 {
 .button-style:hover,
 .button-style:focus {
   cursor: pointer;
-  background-color: #fbca3c;
-  border-color: #0a285f;
+  background-color: var(--yellow-color);
+  border-color: var(--blue-color);
 }
 
 .button-style:active,
 .button-style:active {
-  background-color: #ee1515;
-  border: 5px solid #222224;
-  color: #f0f0f0;
+  background-color: var(--red-color);
+  border: 5px solid var(--dark-color);
+  color: var(--light-color);
 }
 
 .modal {
-  color: #0a285f;
+  color: var(--blue-color);
 }
 
 .modal-dialog {
@@ -72,9 +84,8 @@ h1 {
 }
 
 .modal-img {
-  padding: 20px;
   margin-top: -20px;
-  width: 50%;
+  width: 40%;
 }
 
 #btn-top {
@@ -82,6 +93,7 @@ h1 {
   bottom: 20px;
   right: 20px;
   display: none;
+  border-radius: 50%;
 }
 
 @media all and (max-width: 768px) {
