@@ -47,21 +47,20 @@ h1 {
   color: #0A285F;
   padding-top: 32px;
   padding-bottom: 32px;
-  transition: transform 0.3s;
-  transition-timing-function: ease-in-out;
 }
 
-.button-class:hover,
-.button-class:focus {
+.button-style:hover,
+.button-style:focus {
   cursor: pointer;
-  transform: scale(1.1);
+  background-color: #FBCA3C;
+  border-color: #0A285F;
 }
 
-.button-class:active,
-.button-class:active {
-  background-color: #fff;
-  border: 5px solid #FBCA3C;
-  color: #0A285F;
+.button-style:active,
+.button-style:active {
+  background-color: #ee1515;
+  border: 5px solid #222224;
+  color: #f0f0f0;
 }
 
 .modal {
@@ -78,9 +77,15 @@ h1 {
   width: 50%;
 }
 
+#btn-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
+
 @media all and (max-width: 768px) {
-  .button-class {
-    padding-top: 20px;
-    padding-bottom: 20px;
+  .button-style {
+    padding: 20px auto;
   }
 }

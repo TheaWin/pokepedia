@@ -11,17 +11,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/5fa5b234f5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/styles.css">
     <title>Pokepedia</title>
 </head>
 
 <body>
+    <!--navigation bar-->
     <nav class="navbar fixed-top navbar-expand-sm">
         <span class="navbar-brand">Poképedia</span>
         <button class="navbar-toggler  border-0" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span role="button">
-                <i class="fa fa-search search-button" aria-hidden="true"></i>
+                <i class="fa-solid fa-magnifying-glass" aria-hidden="true" style="color: #ffffff;"></i>
             </span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
@@ -30,6 +32,7 @@
         </div>
     </nav>
 
+    <!--modal to show pokemon details-->
     <div class="container modal-open border border-dark">
         <h1>Pokemon List</h1>
         <ul class="list-group list-unstyled">
@@ -51,6 +54,11 @@
             </div>
         </div>
     </div>
+    
+    <!-- back to top button-->
+    <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-top">
+        <i class="fa-solid fa-arrow-up" style="color: #222224;"></i>
+    </button>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
