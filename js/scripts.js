@@ -1,3 +1,5 @@
+const unusedVariable = "Hello, World!";
+
 let pokemonRepository = (function() {
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
@@ -5,7 +7,7 @@ let pokemonRepository = (function() {
   return {
 
     showModal: function(pokemon) {
-      let modalBody = $('.modal-body');
+      let modalBody = $(".modal-body");
       let modalTitle = $('.modal-title');
       //clear all existing content
       modalBody.html('');
