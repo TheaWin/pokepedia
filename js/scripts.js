@@ -16,6 +16,7 @@ let pokemonRepository = (function() {
         .addClass('modal-img float-right')
         .attr('src', pokemon.imageUrl);
       let contentElement = $('<p>')
+        .addClass('text-left')
         .html(`id: #${pokemon.id}<br>height: ${pokemon.height}<br>types: ${pokemon.types}`);
 
       modalTitle.append(titleElement);
@@ -116,13 +117,13 @@ form.append(input);
 
 function searchFunction() {
   var filter, li, searchValue, buttonPokemon;
-  filter = input.val().toUpperCase();
+  filter = input.val().toLowerCase();
   li = $('.list-group-item');
 
   li.each(function() {
-    buttonPokemon = $(this).find('.button-class');
+    buttonPokemon = $(this).find('.button-style');
     searchValue = buttonPokemon.text();
-    if (searchValue.toUpperCase().indexOf(filter) > -1) {
+    if (searchValue.toLowerCase().indexOf(filter) > -1) {
       $(this).show();
     } else {
       $(this).hide();
@@ -132,3 +133,22 @@ function searchFunction() {
 
 input.on('keyup', searchFunction);
 
+let mybutton = document.getElementById('btn-top');
+
+window.onscroll = function () {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    mybutton.style.display = 'block';
+  } else {
+    mybutton.style.display = 'none';
+  }
+};
+
+mybutton.addEventListener ('click', backToTop);
+
+function backToTop () {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
